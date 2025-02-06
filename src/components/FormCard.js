@@ -15,7 +15,7 @@ const FormCard = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:4000/notes', {
+      const response = await fetch('https://notes-backend-plkz.onrender.com/notes', {
         method: 'POST',
         body: JSON.stringify(notes),
         headers: { 

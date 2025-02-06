@@ -8,7 +8,7 @@ const Notes=()=>{
   useEffect(() => {
     const fetchNotes = async () => {
      
-        const response = await fetch('http://localhost:4000/notes');
+        const response = await fetch('https://notes-backend-plkz.onrender.com/notes');
         if (!response.ok) {
           throw new Error('Failed to fetch notes');
         }

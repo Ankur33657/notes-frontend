@@ -20,7 +20,7 @@ const FormCard = () => {
     if(isConfirmed){
         try {
             // Send a PUT request to the backend to update the note
-            const response = await fetch(`http://localhost:4000/notes/${location.state.id}`, {
+            const response = await fetch(`https://notes-backend-plkz.onrender.com/notes/${location.state.id}`, {
               method: 'PATCH',
               body: JSON.stringify(updatedNote),
               headers: {
