@@ -1,0 +1,114 @@
+/* Global Navbar Styles */
+.navbar {
+    background: linear-gradient(105deg, rgba(0, 123, 255, 1) 0%, rgba(2, 42, 86, 1) 100%); /* Gradient background with a diagonal angle */
+    padding: 2px 2px; /* Small padding for a subtle, compact look */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Elegant shadow for depth */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Navbar Brand (Logo) */
+  .navbar-brand img {
+    height: 18px; /* Smaller, more compact logo */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+  
+  .navbar-brand img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    filter: brightness(1.2); /* Brighten on hover */
+  }
+  
+  /* Navbar Items (Links) */
+  .navbar-nav .nav-link {
+    font-size: 0.95rem; /* Classy font size */
+    font-weight: 500;
+    color: #f8f9fa; /* Soft white color for text */
+    padding: 2px 2px; /* Comfortable padding, not too large */
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f1f1f1;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+    border-radius: 5px; /* Soft corners */
+  }
+  
+  /* Search Form Styles */
+  .form-search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-group {
+    width: 450px; /* Moderate width */
+  }
+  
+  .form-control {
+    border-radius: 25px; /* Rounded corners */
+    padding: 8px 20px;
+    font-size: 0.9rem; /* Balanced font size */
+    border: 1px solid #007bff; /* Subtle blue border */
+    background-color: #f8f9fa; /* Light background for the search input */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #0056b3; /* Dark blue on focus */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3); /* Glowing effect on focus */
+  }
+  
+  /* Search Icon */
+  .text-white i {
+    font-size: 1.1rem; /* Slightly larger search icon */
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .text-white i:hover {
+    color: #007bff; /* Hover color for the icon */
+  }
+  
+  /* Sign In Button */
+  .navbar-nav .nav-item a {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 2px; /* Balanced padding */
+    background-color: #007bff; /* Elegant blue background */
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-nav .nav-item a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Elevation effect */
+  }
+  
+  .navbar-nav .nav-item a:active {
+    transform: translateY(0); /* Reset after click */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1px 1px; /* Slightly reduced padding on smaller screens */
+    }
+  
+    .form-search .input-group {
+      width: 220px;
+    }
+  
+    .navbar-nav .nav-link {
+      font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+  }
+  

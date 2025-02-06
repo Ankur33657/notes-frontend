@@ -1,0 +1,154 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Elegant font */
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Card Styles */
+  .card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+    transform: translateY(-5px); /* Slight elevation */
+  }
+  
+  /* Card Body */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Blockquote Styling */
+  .blockquote-custom {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #007bff; /* Blue accent */
+    padding-left: 15px;
+    position: relative;
+  }
+  
+  .blockquote-custom-icon {
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    background-color: #007bff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Icon shadow */
+  }
+  
+  .blockquote-footer {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #f1f1f1;
+  }
+  
+  .blockquote-footer .font-weight-bold {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Buttons Styling */
+  button {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  /* Delete Button */
+  .btn-danger {
+    background-color: #f44336; /* Red for delete */
+    border: none;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #e53935; /* Darker red on hover */
+  }
+  
+  /* Update Button */
+  .btn-warning {
+    background-color: #ff9800; /* Orange for update */
+    border: none;
+    color: white;
+  }
+  
+  .btn-warning:hover {
+    background-color: #fb8c00; /* Darker orange on hover */
+  }
+  
+  /* Text and Link Styles */
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .text-primary {
+    color: #007bff; /* Blue accent for primary text */
+  }
+  
+  .font-weight-bold {
+    font-weight: bold;
+  }
+  
+  /* Container and Section */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .my-5 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  
+    .blockquote-custom {
+      font-size: 1.1rem;
+    }
+  
+    .blockquote-footer {
+      font-size: 0.9rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  }
+  
