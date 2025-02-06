@@ -26,7 +26,7 @@ const Notes=()=>{
 
         try {
           // Sending the DELETE request to the server with the note's id
-          const response = await fetch(`http://localhost:4000/notes/${id}`, {
+          const response = await fetch(`https://notes-backend-plkz.onrender.com/notes${id}`, {
             method: 'DELETE',
           });
     
