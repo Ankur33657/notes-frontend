@@ -1,29 +1,40 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ items, setFilteredItems }) => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value); // Update the search query when the user types
+    setSearchQuery(e.target.value);
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    // Perform the search logic here
-    const filtered = items.filter(item => 
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    const filtered = items.filter(item =>
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.content.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    setFilteredItems(filtered); // Pass the filtered items to the parent component (if necessary)
+    setFilteredItems(filtered);
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <form className="d-flex align-items-center w-100 form-search" onSubmit={handleSearchSubmit}>
+      <div className="container-fluid">
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-controls="navbarSupportedContent"
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarSupportedContent">
+          <form className="d-flex w-100 form-search" onSubmit={handleSearchSubmit}>
             <div className="input-group">
               <input
                 type="search"
@@ -31,17 +42,17 @@ const Navbar = ({ items, setFilteredItems }) => {
                 placeholder="Search"
                 aria-label="Search"
                 value={searchQuery}
-                onChange={handleSearchChange} // Update search query on input change
+                onChange={handleSearchChange}
               />
+              <button type="submit" className="btn btn-outline-light">
+                <i className="fas fa-search"></i>
+              </button>
             </div>
-            <button type="submit" className="text-white btn btn-link">
-              <i className="fas fa-search ps-3"></i>
-            </button>
           </form>
 
-          <ul className="navbar-nav ms-3">
-            <li>
-              <Link to="/add">
+          <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li className="nav-item">
+              <Link to="/add" className="nav-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" className="bi bi-house-add-fill" viewBox="0 0 16 16">
                   <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 1 1-1 0v-1h-1a.5.5 0 1 1 0-1h1v-1a.5.5 0 0 1 1 0" />
                   <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
